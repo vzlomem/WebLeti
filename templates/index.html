@@ -1,6 +1,10 @@
-{% extends 'base.html' %} 
+{% extends "base.html" %}
 
-{% block content %} 
-{{ super() }}
-<p>Содержимое главной страницы</p>
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mt-4">Добро пожаловать!</h2>
+    <a href="/contents" class="btn btn-danger mt-3">Посмотреть доступный контент</a>
+</div>
 {% endblock %}

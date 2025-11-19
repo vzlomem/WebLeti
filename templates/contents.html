@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Хранилище контента{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Доступный контент</h2>
+    <ul class="list-group mt-3">
+        {% for content in contents %}
+            <li><a href="{{content.url}}">{{content.name}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
