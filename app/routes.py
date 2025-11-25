@@ -23,9 +23,9 @@ def contents():
 @bp.route('/films', methods=['GET'])
 def films():
     films = [
-        {'id': 1, 'name': _('Улыбка'), 'genre': 'Ужасы'},
-        {'id': 2, 'name': _('Матрица'), 'genre': 'Фантастика'},
-        {'id': 3, 'name': _('Очень страшное кино'), 'genre': 'Комедия'}
+        {'id': 1, 'name': _('Улыбка'), 'genre': _('Ужасы')},
+        {'id': 2, 'name': _('Матрица'), 'genre': _('Научная фантастика')},
+        {'id': 3, 'name': _('Очень страшное кино'), 'genre': _('Комедия')}
     ]
 
     film_genre = request.args.get('genre')
