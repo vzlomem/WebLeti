@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Фильмы{% endblock %}
+{% block title %}{{_('Фильмы')}}{% endblock %}
 
 {% block content %}
-    <h2 class="mb-4">Доступные фильмы</h2>
+    <h2 class="mb-4">{{_('Доступные фильмы')}}</h2>
     <div class="row">
         {% for film in films %}
             <div class="col-md-4">
                 <div class="card mb-3 border-danger">
                     <div class="card-body">
                         <h5 class="card-title">{{ film.name }}</h5>
-                        <p class="card-text">Жанр: {{ film.genre }}</p>
-                        <a href="/films/{{ film.id }}" class="btn btn-outline-danger">Подробнее</a>
+                        <p class="card-text">{{_('Жанр')}}: {{ film.genre }}</p>
+                        <a href="/films/{{ film.id }}" class="btn btn-outline-danger">{{_('Подробнее')}}</a>
                     </div>
                 </div>
             </div>

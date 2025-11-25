@@ -1,6 +1,13 @@
 from flask import Flask, render_template, url_for, request
+from flask_babel import Babel
+
 
 app = Flask(__name__)
+babel = Babel(app)
+
+
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 @app.route("/")
@@ -34,7 +41,6 @@ def films():
         films = [film for film in films if film['genre'] == film_genre]
 
     return render_template('films.html', films=films)
-
 
 
 if __name__ == "__main__":
