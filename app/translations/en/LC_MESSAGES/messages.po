@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-11-25 12:22+0300\n"
-"PO-Revision-Date: 2025-11-25 12:00+0300\n"
+"POT-Creation-Date: 2025-12-02 19:07+0300\n"
+"PO-Revision-Date: 2025-12-02 16:56+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -18,59 +18,87 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: app/routes.py:16 app/templates/films.html:3
-msgid "Фильмы"
-msgstr "Films"
-
-#: app/routes.py:17
-msgid "Сериалы"
-msgstr "Series"
-
-#: app/routes.py:18
-msgid "Книги"
-msgstr "Books"
-
-#: app/routes.py:26
+#: app/routes.py:29
 msgid "Улыбка"
 msgstr "Smile"
 
-#: app/routes.py:26
-msgid "Ужасы"
-msgstr "Horrors"
+#: app/routes.py:31 app/routes.py:38
+msgid "Просмотрено"
+msgstr "Watched"
 
-#: app/routes.py:27
+#: app/routes.py:36
 msgid "Матрица"
 msgstr "The Matrix"
 
-#: app/routes.py:27
-msgid "Научная фантастика"
-msgstr "Science fiction"
-
-#: app/routes.py:28
+#: app/routes.py:43
 msgid "Очень страшное кино"
 msgstr "Scary Movie"
 
-#: app/routes.py:28
+#: app/routes.py:45 app/routes.py:52
+msgid "Не просмотрено"
+msgstr "Not Watched"
+
+#: app/routes.py:50
+msgid "Голый пистолет"
+msgstr "The Naked Gun: From the Files of Police Squad!"
+
+#: app/routes.py:58 app/routes.py:93 app/templates/films.html:18
+#: app/templates/series.html:14
+msgid "Ужасы"
+msgstr "Horrors"
+
+#: app/routes.py:59 app/routes.py:94 app/templates/films.html:23
+#: app/templates/series.html:15
+msgid "Научная фантастика"
+msgstr "Sci-fi"
+
+#: app/routes.py:60 app/routes.py:95 app/templates/films.html:28
+#: app/templates/series.html:16
 msgid "Комедия"
 msgstr "Comedy"
 
 #: app/templates/contents.html:3
-msgid "Хранилище контента"
-msgstr "Content vault"
+msgid "Моя медиатека"
+msgstr "My media library"
 
-#: app/templates/contents.html:7
+#: app/templates/contents.html:6
 msgid "Доступный контент"
 msgstr "Available content"
+
+#: app/templates/films.html:3
+msgid "Фильмы"
+msgstr "Films"
 
 #: app/templates/films.html:6
 msgid "Доступные фильмы"
 msgstr "Available films"
 
-#: app/templates/films.html:13
-msgid "Жанр"
+#: app/templates/films.html:14
+#, fuzzy
+msgid "Жанры"
 msgstr "Genre"
 
-#: app/templates/films.html:14
+#: app/templates/films.html:34
+msgid "Сортировка по названию"
+msgstr "Sort by title"
+
+#: app/templates/films.html:36
+msgid "По возрастанию"
+msgstr "Ascending"
+
+#: app/templates/films.html:37
+msgid "По убыванию"
+msgstr "Descending"
+
+#: app/templates/films.html:41
+msgid "Применить"
+msgstr "Apply"
+
+#: app/templates/films.html:52
+msgid "Статус"
+msgstr "Status"
+
+#: app/templates/films.html:53 app/templates/series.html:31
 msgid "Подробнее"
 msgstr "More"
 
@@ -83,6 +111,33 @@ msgid "Добро пожаловать!"
 msgstr "Welcome!"
 
 #: app/templates/index.html:8
-msgid "Посмотреть доступный контент"
-msgstr "View available content"
+msgid "Посмотреть медиатеку"
+msgstr "View media library"
+
+#: app/templates/series.html:3
+msgid "Сериалы"
+msgstr "Series"
+
+#: app/templates/series.html:6
+#, fuzzy
+msgid "Доступные сериалы"
+msgstr "Available films"
+
+#: app/templates/series.html:11
+msgid "Фильтр по жанру"
+msgstr "Genre filter"
+
+#: app/templates/series.html:13
+msgid "Все"
+msgstr "All"
+
+#: app/templates/series.html:20
+msgid "Фильтровать"
+msgstr "Filter"
+
+#~ msgid "Посмотреть доступный контент"
+#~ msgstr "View available content"
+
+#~ msgid "Хранилище контента"
+#~ msgstr "Content vault"
 

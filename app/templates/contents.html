@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}{{_('Хранилище контента')}}{% endblock %}
+{% block title %}{{ _('Моя медиатека') }}{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <h2 class="text-center">{{_('Доступный контент')}}</h2>
-    <ul class="list-group mt-3">
-        {% for content in contents %}
-            <li><a href="{{content.url}}">{{content.name}}</a></li>
-        {% endfor %}
-    </ul>
-</div>
+<h2 class="text-center mb-4">{{ _('Доступный контент') }}</h2>
+
+<ul class="list-group">
+    {% for content in contents %}
+        <li class="list-group-item">
+            <a href="{{ url_for_lang('contents.' + content.url) }}">{{ _(content.name) }}</a>
+        </li>
+    {% endfor %}
+</ul>
 {% endblock %}

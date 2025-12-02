@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Сериалы') }}{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">{{ _('Доступные сериалы') }}</h2>
+
+<form method="get" class="row g-3 mb-4 align-items-end">
+    
+    <div class="col-md-6">
+        <label for="genre" class="form-label">{{ _('Фильтр по жанру') }}:</label>
+        <select id="genre" name="genre" class="form-select">
+            <option value="all"{% if genre=='all' %}selected{% endif %}>{{ _('Все') }}</option>
+            <option value="horror"{% if genre=='horror' %}selected{% endif %}>{{ _('Ужасы') }}</option>
+            <option value="sci-fi"{% if genre=='sci-fi' %}selected{% endif %}>{{ _('Научная фантастика') }}</option>
+            <option value="comedy"{% if genre=='comedy' %}selected{% endif %}>{{ _('Комедия') }}</option>
+        </select>
+    </div>
+    <div class="col-md-6 d-flex justify-content-start justify-content-md-end">
+        <button type="submit" class="btn btn-danger">{{ _('Фильтровать') }}</button>
+    </div>
+</form>
+
+<div class="row">
+    {% for s in series_list %}
+    <div class="col-md-4 mb-4">
+        <div class="card border-danger h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ _(s.name) }}</h5>
+                <p class="card-text">{{ _(s.genre_display) }}</p>
+                <a href="{{ url_for_lang('contents.series', series_id=s.id) }}" class="btn btn-outline-danger">{{ _('Подробнее') }}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
