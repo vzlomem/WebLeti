@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request
+from flask_login import login_required
 from flask_babel import _
 
 bp = Blueprint("contents", __name__)
-
 
 # --- Главная страница ---
 @bp.route("/")
@@ -12,6 +12,7 @@ def index():
 
 # --- Страница медиатеки ---
 @bp.route("/contents")
+@login_required
 def contents():
     contents_list = [
         {"name": "Фильмы", "url": "films"},
@@ -21,6 +22,7 @@ def contents():
 
 
 @bp.route("/films", methods=["GET"])
+@login_required
 def films():
     # Список фильмов
     films_list = [
@@ -82,6 +84,7 @@ def films():
 
 # --- Страница сериалов ---
 @bp.route("/series", methods=["GET"])
+@login_required
 def series():
     series_list = [
         {"id": 1, "name": "Очень странные дела", "genre": "sci-fi"},

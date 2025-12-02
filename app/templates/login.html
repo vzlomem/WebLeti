@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Авторизация') }}{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">{{ _('Авторизация') }}</h2>
+
+<form method="post" class="card p-4 border-danger">
+
+    <input type="hidden" name="lang" value="{{ request.args.get('lang', 'ru') }}">
+
+    <div class="mb-3">
+        <label class="form-label">{{ _('Имя пользователя') }}</label>
+        <input type="text" class="form-control" name="username" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">{{ _('Пароль') }}</label>
+        <input type="password" class="form-control" name="password" required>
+    </div>
+
+    <button type="submit" class="btn btn-danger w-100">{{ _('Войти') }}</button>
+
+</form>
+
+{% endblock %}
