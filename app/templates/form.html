@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Проверка cookies') }}{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Введите данные</title>
+</head>
+<body>
+    <h2>Введите свои данные</h2>
+    <form method="POST">
+        <div>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" value="{{ saved_username }}" required>
+        </div>
+        <div>
+            <label for="favorite_genre">Ваш любимый жанр:</label>
+            <select id="favorite_genre" name="favorite_genre">
+                <option value="Не выбран" {% if saved_genre == 'Не выбран' %}selected{% endif %}>Не выбран</option>
+                <option value="Ужасы" {% if saved_genre == 'Ужасы' %}selected{% endif %}>Ужасы</option>
+                <option value="Научная фантастика" {% if saved_genre == 'Научная фантастика' %}selected{% endif %}>Научная фантастика</option>
+                <option value="Комедия" {% if saved_genre == 'Комедия' %}selected{% endif %}>Комедия</option>
+                <option value="Драма" {% if saved_genre == 'Драма' %}selected{% endif %}>Драма</option>
+            </select>
+        </div>
+        <div>
+            <label for="email">Почта:</label>
+            <input type="text" id="email" name="email" value="{{ saved_email }}" required>
+        </div>
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+    <br>
+    <a href="/result">Посмотреть текущий результат (без отправки формы)</a>
+</body>
+</html>
+
+{% endblock %}

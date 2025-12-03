@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Информация о пользователе') }}{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+</head>
+<body>
+    <h2>Информация о пользователе</h2>
+
+    <p><strong>Имя пользователя:</strong> {{ username }}</p>
+    <p><strong>Любимый жанр:</strong> {{ favorite_genre }}</p>
+    <p><strong>Почта:</strong> {{ email }}</p>
+    <p><strong>Количество обращений:</strong> {{ visit_count }}</p>
+    <p><strong>Дата и время последнего обращения:</strong> {{ last_visit }}</p>
+
+    <br>
+    <a href="/">Вернуться и изменить данные</a>
+</body>
+</html>
+
+{% endblock %}
