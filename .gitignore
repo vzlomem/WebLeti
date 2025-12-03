@@ -1,2 +1,4 @@
 venv/
 messages.pot
+cert.pem
+key.pem
